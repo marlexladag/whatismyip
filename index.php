@@ -25,5 +25,11 @@ $users_ip = whatsMyIP();
 
 echo $users_ip; // Output IP address [Ex: 123.12.41.42]
 
+$details = json_decode(file_get_contents("https://api.ipdata.co/{$users_ip}"));
+
+echo "<pre>";
+print_r($details);
+echo "</pre>";
+
 
 ?>
